@@ -8,4 +8,24 @@
 <br> Adding Analytic scripts(to be competed)
 
 ###### Updates 3/10/2018
-<br> A few updates on Analytic scripts.Adding some features such as quarterpre30,quarterpre20,quarterpre10.
+<br> finished data pre-processing
+
+### Features:
+<br>bfx_bids_wall: bids wall from bitfinex (select the largest bids amount from order book)
+<br>bfx_asks_wall: asks wall from bitfinex (select the largest asks amount from order book)
+<br>bfx_total_bids: total bids from order book
+<br>bfx_total_asks: total asks from order book
+<br>bfx_buy_volumn: total buy volumn from bitfinex during this period
+<br>bfx_sell_volumn: total sell volumn from bitfinex during this period
+<br>USDT_exceed: Huobi OTC price - USD/CNY enchange rate (This index is to see if the Chinese prople are willing to buy bitcoin with a premium price.
+<br>pre_price30: bitcoin future quarterly price from okex 90 minutes ago.
+<br>pre_price20: bitcoin future quarterly price from okex 60 minutes ago.
+<br>pre_price10: bitcoin future quarterly price from okex 30 minutes ago.
+<br>pre_bfx: bitcoin price from bitfinex 3 minutes ago.
+<br>pre_news10:  Get news from wallstreet.cn and analyze the emotion(from 0-1). Pre_news10 is the emotion 30 minutes ago 
+<br>pre_8btc10:  Get post and reply from 8btc.com and analyze the emotion(from 0-1). pre_8btc10 is the emotion 30 minutes ago 
+
+### Label:
+<br>next_price30: bitcoin future quarterly price from okex 90 minutes later.
+<br>next_price20: bitcoin future quarterly price from okex 60 minutes later
+<br>next_price10: bitcoin future quarterly price from okex 30 minutes later
