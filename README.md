@@ -1,6 +1,7 @@
 # Bitcoin_price_prediction
 
-<br> Predict bitcoin price using machine learning tools based on the data from bitcoin_trade_data program
+<br> Predict bitcoin price using machine learning tools based on the data from bitcoin_trade_data project
+<br> After finished this project, will start another project to autotrade the future in OKex based on machine learning result.
 
 ##Updateds
 ###### Updates 3/9/2018
