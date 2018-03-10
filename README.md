@@ -13,8 +13,8 @@
 ### Features:
 <br>bfx_bids_wall: bids wall from bitfinex (select the largest bids amount from order book)
 <br>bfx_asks_wall: asks wall from bitfinex (select the largest asks amount from order book)
-<br>bfx_total_bids: total bids from order book
-<br>bfx_total_asks: total asks from order book
+<br>bfx_total_bids: total bids from order book(bitfinex)
+<br>bfx_total_asks: total asks from order book(bitfinex)
 <br>bfx_buy_volumn: total buy volumn from bitfinex during this period
 <br>bfx_sell_volumn: total sell volumn from bitfinex during this period
 <br>USDT_exceed: Huobi OTC price - USD/CNY enchange rate (This index is to see if the Chinese prople are willing to buy bitcoin with a premium price.
