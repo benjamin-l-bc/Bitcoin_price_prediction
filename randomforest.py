@@ -4,12 +4,12 @@ Created on Sun Mar 11 16:53:09 2018
 
 @author: v-beshi
 """
-
 import predict_btc_future
 from sklearn import preprocessing
 from sklearn.decomposition import IncrementalPCA
 from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import GridSearchCV
 
 data=predict_btc_future.get_agg_data()
 
@@ -28,4 +28,8 @@ PCA=IncrementalPCA(n_components=5)
 PCA.fit(features)
 PCA_feature=PCA.transform(features)
 X_train,X_test,y1_train,y1_test=train_test_split(PCA_feature,y1,test_size=0.33)
-rfr=RandomForestRegressor()
+rfr=RandomForestClassifier()
+parameters={'n_estimators':(5,10,15,20),'criterion':('gini','entropy'),'max_depth':(None,2,4)}
+clf=GridSearchCV(rfr,parameters)
+clf.fit(X_train,y1_train)
+print(clf.score(X_test,y1_test))
