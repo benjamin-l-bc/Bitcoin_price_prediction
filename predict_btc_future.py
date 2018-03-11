@@ -38,21 +38,30 @@ def get_agg_data():
 
     next_price5=[]
     for i in range(0,len(raw_data)-5):
-        next_price5.append((raw_data['ok0330'][i+5]-raw_data['ok0330'][i])/(raw_data['ok0330'][i]))
+        if (raw_data['ok0330'][i+5]-raw_data['ok0330'][i])/(raw_data['ok0330'][i])>0:
+            next_price5.append(1)
+        else:
+            next_price5.append(0)
     for i in range(0,5):
         next_price5.append(0)
     next_price5=pd.Series(next_price5,name='next_price5')
 
     next_price10=[]
     for i in range(0,len(raw_data)-10):
-        next_price10.append((raw_data['ok0330'][i+10]-raw_data['ok0330'][i])/(raw_data['ok0330'][i]))
+        if (raw_data['ok0330'][i+10]-raw_data['ok0330'][i])/(raw_data['ok0330'][i])>0:
+            next_price10.append(1)
+        else:
+            next_price10.append(0)
     for i in range(0,10):
         next_price10.append(0)
     next_price10=pd.Series(next_price10,name='next_price10')   
 
     next_price15=[]
     for i in range(0,len(raw_data)-15):
-        next_price15.append((raw_data['ok0330'][i+15]-raw_data['ok0330'][i])/(raw_data['ok0330'][i]))
+        if (raw_data['ok0330'][i+15]-raw_data['ok0330'][i])/(raw_data['ok0330'][i])>0:
+            next_price15.append(1)
+        else:
+            next_price15.append(0)
     for i in range(0,15):
         next_price15.append(0)
     next_price15=pd.Series(next_price15,name='next_price15')
@@ -78,4 +87,5 @@ def get_agg_data():
 
     raw_data=raw_data.drop(['ok0330','DateTime','ok_thisweek','huobi_USDT','exchange_rate','bfx_last_price','news_emotion','8btc_emotion'],axis=1)
     agg_data=pd.concat([raw_data,pre_price15,pre_price10,pre_price5,pre_bfx,pre_news10,pre_8btc10,next_price5,next_price10,next_price15],axis=1)
+    agg_data=agg_data[15:len(agg_data)-15]
     return(agg_data)
