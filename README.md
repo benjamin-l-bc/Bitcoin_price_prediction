@@ -29,3 +29,6 @@
 <br>next_price15: bitcoin future quarterly price from okex 45 minutes later.
 <br>next_price10: bitcoin future quarterly price from okex 30 minutes later
 <br>next_price5: bitcoin future quarterly price from okex 15 minutes later
+
+###### Updates 3/12/2018
+<br> Data Modeling: Use sklearn - Test SVM, Random Forest and neural network with different parameters. Try to find out the best strategy.(To be updated)
