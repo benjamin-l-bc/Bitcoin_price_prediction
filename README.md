@@ -23,7 +23,6 @@
 <br>pre_price5: bitcoin future quarterly price from okex 15 minutes ago.
 <br>pre_bfx: bitcoin price from bitfinex 3 minutes ago.
 <br>pre_news10:  Get news from wallstreet.cn and analyze the emotion(from 0-1). Pre_news10 is the emotion 30 minutes ago 
-<br>pre_8btc10:  Get post and reply from 8btc.com and analyze the emotion(from 0-1). pre_8btc10 is the emotion 30 minutes ago 
 
 ### Label:
 <br>next_price15: bitcoin future quarterly price from okex 45 minutes later.
