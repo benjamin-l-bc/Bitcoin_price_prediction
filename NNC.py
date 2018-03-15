@@ -23,16 +23,19 @@ def runnnc():
     parameters={'activation':['identity','logistic','tanh','relu']}
     clf=GridSearchCV(nn,parameters)
     clf.fit(X_train,y1_train)
+    print("Next 5min score={}".format(clf.score(X_test,y1_test)))
 
     X_train,X_test,y2_train,y2_test=train_test_split(PCA_feature,y2,test_size=0.33)
     nn=MLPClassifier()
     clf2=GridSearchCV(nn,parameters)
     clf2.fit(X_train,y2_train)
-
+    print("Next 10min score={}".format(clf.score(X_test,y2_test)))
+    
     X_train,X_test,y3_train,y3_test=train_test_split(PCA_feature,y3,test_size=0.33)
     nn=MLPClassifier()
     clf3=GridSearchCV(nn,parameters)
     clf3.fit(X_train,y3_train)
+    print("Next 15min score={}".format(clf.score(X_test,y1_test)))
     
     joblib.dump(PCA,"pca.m")
     joblib.dump(clf,"next5.m")
