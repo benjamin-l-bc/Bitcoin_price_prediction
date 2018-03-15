@@ -31,3 +31,6 @@
 
 ###### Updates 3/12/2018
 <br> Data Modeling: Use sklearn - Test SVM, Random Forest and neural network with different parameters. Try to find out the best strategy.(To be updated)
+
+###### Updates 3/15/2018
+<br> 1 Bug fixed
