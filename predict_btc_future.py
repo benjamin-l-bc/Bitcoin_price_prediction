@@ -8,7 +8,7 @@ Created on Fri Mar  9 17:06:09 2018
 import pyodbc
 import pandas as pd
 
-def get_agg_data(raw_data):
+def get_agg_data():
     
 	con=pyodbc.connect('DRIVER={SQL Server};SERVER=ServerName;DATABASE=DB;UID=ID;PWD=Password')
     raw_data=pd.read_sql('select * from dbo.BitcoinTradeHistory',con)
